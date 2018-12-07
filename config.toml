@@ -1,0 +1,30 @@
+baseURL = "https://eiparyen.github.io"
+languageCode = "en-us"
+title = "Eiparyen"
+subtitle = "ai-PAIR-ee-in"
+theme = "beautifulhugo"
+metaDataFormat = "yaml"
+pygmentsStyle = "trac"
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+publishDir = "docs"
+
+[Params]
+  useHLJS = true
+  socialShare = true
+
+[blackfriday]
+  plainIDAnchors = true
+  hrefTargetBlank = true
+
+[[menu.main]]
+  name = "Blog"
+  url = ""
+  weight = 1
+
+[[menu.main]]
+  name = "About"
+  url = "page/about/"
+  weight = 3
+

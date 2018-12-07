@@ -1,0 +1,23 @@
+language: go
+go:
+  - master
+
+addons:
+  apt:
+    packages:
+      - python-pygments
+
+install:
+  - rm -rf docs || exit 0
+  - go get github.com/gohugoio/hugo
+
+script:
+  - hugo
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: docs
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
