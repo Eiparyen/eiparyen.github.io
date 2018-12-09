@@ -8,7 +8,6 @@ pygmentsStyle = "trac"
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
-publishDir = "docs"
 
 [Params]
   useHLJS = true
