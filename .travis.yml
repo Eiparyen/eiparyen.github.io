@@ -8,14 +8,13 @@ addons:
       - python-pygments
 
 install:
-  - rm -rf public || exit 0
+  - rm -rf docs || exit 0
   - go get github.com/gohugoio/hugo
 
 script:
   - hugo
 
 deploy:
-  local_dir: public
   provider: pages
   skip_cleanup: true
   keep-history: true
