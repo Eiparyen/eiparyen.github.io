@@ -8,8 +8,11 @@ pygmentsStyle: trac
 pygmentsUseClasses: true
 pygmentsCodeFences: true
 pygmentsCodefencesGuessSyntax: true
+disqusShortname: eiparyen
 
 Params:
+  comments: true
+  delayDisqus: true
   useHLJS: true
   socialShare: true
   rss: true
