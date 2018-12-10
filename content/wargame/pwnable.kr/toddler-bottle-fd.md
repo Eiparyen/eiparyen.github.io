@@ -8,6 +8,7 @@ type: post
 
 ### fd (1pt)
 
+![fd](/static/fd1.PNG)
 ```
 Mommy! what is a file descriptor in Linux?
 
