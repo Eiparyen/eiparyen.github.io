@@ -15,7 +15,6 @@ type: post
 ssh로 접속해보쟝 --->  Domain : "fd@pwnable.kr"   Port : 2222   pw : "guest"\
 오 포너블 멋진문구가 두둥하고 등장해.
 
-<br>
 
 ```sh
 fd@ubuntu:~$ whoami
