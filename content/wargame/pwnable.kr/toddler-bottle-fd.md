@@ -10,7 +10,7 @@ type: post
 <br>
 ![fd](/img/pwnable/pwnable.kr/fd/fd1.png)
 
-<span style = "color:blue">blahblah</span>
+<span style = "color:blue">blahblah</span><br>
 천리길도 한걸음부터야 1번문제 부터 ㄱㄱ 아자아자
 ssh로 접속해보쟝 --->  Domain : "fd@pwnable.kr"   Port : 2222   pw : "guest"\
 오 포너블 멋진문구가 두둥하고 등장해.
