@@ -9,14 +9,6 @@ type: post
 ### fd (1pt)
 
 ![fd](/static/fd1.PNG)
-```
-Mommy! what is a file descriptor in Linux?
-
-* try to play the wargame your self but if you are ABSOLUTE beginner, follow this tutorial link:
-* https://youtu.be/971eZhMHQQw
-*
-* ssh fd@pwnable.kr -p2222 (pw:guest)
-```
 
 <br>
 천리길도 한걸음부터야 1번문제 부터 ㄱㄱ 아자아자\
