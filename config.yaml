@@ -1,0 +1,32 @@
+baseURL: https://eiparyen.github.io
+languageCode: en-us
+title: Eiparyen
+subtitle: ai-PAIR-ee-in
+theme: beautifulhugo
+metaDataFormat: yaml
+pygmentsStyle: trac
+pygmentsUseClasses: true
+pygmentsCodeFences: true
+pygmentsCodefencesGuessSyntax: true
+
+Params:
+  useHLJS: true
+  socialShare: true
+  rss: true
+
+blackfriday:
+  plainIDAnchors: true
+  hrefTargetBlank: true
+
+menu:
+  main:
+    - name: About
+      url: about/
+      weight: 1
+    - identifier: wargame
+      name: wargame
+      weight: 2
+    - parent: wargame
+      name: pwnable.kr
+      url: wargame/pwnable.kr/
+      weight: 1
