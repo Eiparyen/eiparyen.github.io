@@ -26,10 +26,6 @@ menu:
     - name: About
       url: about/
       weight: 1
-    - identifier: wargame
-      name: wargame
+    - name: pwnable
+      url: pwnable/
       weight: 2
-    - parent: wargame
-      name: pwnable.kr
-      url: wargame/pwnable.kr/
-      weight: 1
