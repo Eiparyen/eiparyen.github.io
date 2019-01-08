@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pwnable on Eiparyen</title>
+    <link>https://eiparyen.github.io/tags/pwnable/</link>
+    <description>Recent content in Pwnable on Eiparyen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Dec 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://eiparyen.github.io/tags/pwnable/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1st Problem - dowoo</title>
+      <link>https://eiparyen.github.io/pwnable/2018-12-17/</link>
+      <pubDate>Thu, 13 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://eiparyen.github.io/pwnable/2018-12-17/</guid>
+      <description>http://pwnable.kr - Rookiss - fsb deadline - 2018.12.18 18:00 딱봐도 문제가 format string bug.. ㅎㅎㅎ
+일단 소스코드를 보쟙 cat fsb.c !
+#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;alloca.h&amp;gt;#include &amp;lt;fcntl.h&amp;gt; unsigned long long key; char buf[100]; char buf2[100]; int fsb(char** argv, char** envp){ char* args[]={&amp;#34;/bin/sh&amp;#34;, 0}; int i; char*** pargv = &amp;amp;argv; char*** penvp = &amp;amp;envp; char** arg; char* c; for(arg=argv;*arg;arg++) for(c=*arg; *c;c++) *c=&amp;#39;\0&amp;#39;; for(arg=envp;*arg;arg++) for(c=*arg; *c;c++) *c=&amp;#39;\0&amp;#39;; *pargv=0; *penvp=0; for(i=0; i&amp;lt;4; i++){ printf(&amp;#34;Give me some format strings(%d)\n&amp;#34;, i+1); read(0, buf, 100); printf(buf); } printf(&amp;#34;Wait a sec.</description>
+    </item>
+    
+    <item>
+      <title>2st Problem - dowoo</title>
+      <link>https://eiparyen.github.io/pwnable/2018-12-19/</link>
+      <pubDate>Thu, 13 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://eiparyen.github.io/pwnable/2018-12-19/</guid>
+      <description>http://pwnable.kr - Rookiss - dragon deadline - 2018.12.20 18:00 일단 백문이 불여일견이라고.. 한번 해보자. nc pwnable.kr 9004
+Welcome to Dragon Hunter! Choose Your Hero [ 1 ] Priest [ 2 ] Knight 흠.. 한마디로 드래곤을 죽이는 것이다.. 뭐 직접 해보면 알겠지 스킵!
+음.. 근데 어미드래곤이나 베이비 드래곤이나 어의 없게 한틱남기고 못죽인다. 뭣이런 ㅈ같은 게임이 다있누.. 한껏 무기력함을 느끼고 바이너리를 받아서 분석해보자! http://pwnable.kr/bin/dragon
+이번엔 c 언어를 주지않으셨다&amp;hellip; 하&amp;hellip; 아이다..쓸까?? 쓰자쓰자 !</description>
+    </item>
+    
+    <item>
+      <title>3st Problem - dowoo</title>
+      <link>https://eiparyen.github.io/pwnable/2019-1-08/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://eiparyen.github.io/pwnable/2019-1-08/</guid>
+      <description> http://pwnable.kr - Rookiss - otp deadline - 2019.1.9 18:00 </description>
+    </item>
+    
+  </channel>
+</rss>
